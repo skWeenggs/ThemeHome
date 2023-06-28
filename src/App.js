@@ -20,6 +20,8 @@ import Domain from './Component/AdminPages/Domain';
 import Settings from './Component/AdminPages/Settings';
 import Analysis from './Component/AdminPages/Analysis';
 import PageTitleUpdater from './Component/PageTitleUpdater';
+import Features from './Component/AdminPages/Features';
+import FooterAdd from './Component/AdminPages/FooterAdd';
 
 function App() {
   const { theme } = useContext(ThemeContext);
@@ -44,6 +46,8 @@ function App() {
                 <Route path='/domain' element={<Domain />}/>
                 <Route path='/analysis' element={<Analysis />} />
                 <Route path='/settings' element={<Settings />} />
+                <Route path='/settings/features' element={<Features />} />
+                <Route path='/settings/footer' element={<FooterAdd />} />
               </>
             ) : (
               <>

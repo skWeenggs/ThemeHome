@@ -26,7 +26,8 @@ const Authors = () => {
   const [slug, setSlug] = useState('');
   const [status, setStatus] = useState('');
   const [date, setDate] = useState('');
-  async function getAll() {
+  
+  const getAll=async()=> {
     const response = await axios.get(`http://vercel-notion.vercel.app/AdminPages/${myData}/${user.name}`)
     console.log("Admin data", response);
     setAllData(response.data.result.results);
@@ -101,7 +102,7 @@ const Authors = () => {
     },
     {
       headerName: "STATUS", field: "status", cellRenderer: (params) => {
-        console.log(params);
+     
         return params.value === 'Done' ? (<span className='bg-green-300 text-gray-400 rounded-full  px-1 '>Published</span>) : (<span className='text-gray-600  rounded-full  px-5  bg-gray-300'>Draft</span>)
       }
     },

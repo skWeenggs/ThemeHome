@@ -208,7 +208,7 @@ const handleClickOpen=(list)=>{
   const handleCancelClose = () => {
     setShowModal(false)
   }
-  console.log(update);
+
  
   return (
     <>

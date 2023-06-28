@@ -35,7 +35,7 @@ const Pages = () => {
   useEffect(() => {
     getAll()
 
-  }, [myData])
+  }, [])
 
   const handleClickOpen=(list)=>{
     console.log(list);

@@ -10,7 +10,7 @@ const getPageTitle=(pathname)=>{
           return 'Registration Page';
         
         case '/dashboard':
-          return 'DashBoard Page';
+          return 'Home Page';
 
         case '/content':
           return 'Content Page';

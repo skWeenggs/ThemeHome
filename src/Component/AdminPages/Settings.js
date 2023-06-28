@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import Sidebar from '../Sidebar';
 import {BiCog} from 'react-icons/bi'
 import {TbDeviceDesktopAnalytics} from 'react-icons/tb'
@@ -7,7 +7,12 @@ import {BsGrid1X2,BsDistributeVertical} from 'react-icons/bs'
 import {CiMail,CiPalette} from 'react-icons/ci'
 import {RiDeleteBin5Line,RiDatabase2Line} from 'react-icons/ri'
 import {HiOutlineViewGrid,HiOutlineCode} from 'react-icons/hi'
+import { Link, Navigate, useNavigate } from 'react-router-dom';
 const Settings = () => {
+    const navigate=useNavigate();
+    const handleCall=(path)=>{
+        navigate(`${path}`)
+    }
   return (
     <div className='min-h-[calc(100vh-65px-100px)] w-full flex ' >
         <Sidebar />
@@ -38,14 +43,16 @@ const Settings = () => {
             </div>
         </div>
        
-        <div className='flex justify-start items-center gap-4 p-5'>
-            <div className='text-3xl bg-gray-200 rounded-full flex  p-2  items-center text-center '>
+        <div className='flex justify-start items-center gap-4 p-5  '>
+           
+            <div className='text-3xl bg-gray-200 hover:bg-gray-400 rounded-full flex  p-2  items-center text-center cursor-pointer' onClick={()=>{handleCall('/settings/features')}}>
             <TbSpeakerphone />
             </div>
-            <div>
+            <div className='hover:text-gray-800 cursor-pointer' onClick={()=>{handleCall('/settings/features')}}>
                 <h1 className=''>Features </h1>
                 <p>enable and disable the features.</p>
             </div>
+            
         </div>
         
         <div className='flex justify-start items-center gap-4 p-5'>
@@ -59,10 +66,10 @@ const Settings = () => {
         </div>
 
         <div className='flex justify-start items-center gap-4 p-5'>
-            <div className='text-3xl bg-gray-200 rounded-full flex  p-2  items-center text-center '>
+            <div className='text-3xl bg-gray-200 hover:bg-gray-400  rounded-full flex  p-2  items-center text-center cursor-pointer ' onClick={()=>{handleCall('/settings/footer')}}>
             <BsDistributeVertical />
             </div>
-            <div>
+            <div className='hover:text-gray-800 cursor-pointer' onClick={()=>{handleCall('/settings/footer')}}>
                 <h1 className=''>Footer </h1>
                 <p>Set up newsletter,footer links and copyright</p>
             </div>

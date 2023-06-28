@@ -44,13 +44,13 @@ const Header = () => {
 
     useEffect(()=>{
         async function LoadData(){
-            const res=await axios.get(`https://trynitybackend.vercel.app/users`);
+            const res=await axios.get(`https://vercel-notion.vercel.app/users`);
             const uniqueData = res.data.results.filter(newData => !array.some(existingData => existingData.properties.ContentPageId.rich_text.plain_text === newData.properties.ContentPageId.rich_text.plain_text));
             sessionStorage.setItem("UsersList",JSON.stringify(uniqueData))
             setArray(uniqueData)
         }
         async function callonce(){
-            const response=await axios.get(`https://trynitybackend.vercel.app/fetchuserdata/${databaseId}/${domain}`)
+            const response=await axios.get(`https://vercel-notion.vercel.app/fetchuserdata/${databaseId}/${domain}`)
             setHeader(response.data)
             sessionStorage.setItem('header',JSON.stringify(response.data))
         }

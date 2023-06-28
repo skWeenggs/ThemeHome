@@ -27,7 +27,7 @@ const Tags = () => {
   const [slug, setSlug] = useState('');
   const [status, setStatus] = useState('');
   const [date, setDate] = useState('');
-  async function getAll() {
+  const getAll=async()=> {
     const response = await axios.get(`https://vercel-notion.vercel.app/AdminPages/${myData}/${user.name}`)
     console.log("Admin data", response);
     setAllData(response.data.result.results);
