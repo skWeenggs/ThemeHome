@@ -22,6 +22,7 @@ import Analysis from './Component/AdminPages/Analysis';
 import PageTitleUpdater from './Component/PageTitleUpdater';
 import Features from './Component/AdminPages/Features';
 import FooterAdd from './Component/AdminPages/FooterAdd';
+import Navigation from './Component/AdminPages/Navigation';
 
 function App() {
   const { theme } = useContext(ThemeContext);
@@ -48,6 +49,7 @@ function App() {
                 <Route path='/settings' element={<Settings />} />
                 <Route path='/settings/features' element={<Features />} />
                 <Route path='/settings/footer' element={<FooterAdd />} />
+                <Route path='/settings/navigation' element={<Navigation />} />
               </>
             ) : (
               <>

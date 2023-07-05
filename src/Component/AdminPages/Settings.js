@@ -56,10 +56,10 @@ const Settings = () => {
         </div>
         
         <div className='flex justify-start items-center gap-4 p-5'>
-            <div className='text-xl bg-gray-200 rounded-full flex  p-3  items-center text-center '>
+            <div className='text-xl bg-gray-200 rounded-full flex  p-3  items-center text-center cursor-pointer hover:bg-gray-400' onClick={()=>{handleCall('/settings/navigation')}}>
             <BsGrid1X2 />
             </div>
-            <div>
+            <div className='hover:text-gray-800 cursor-pointer'  onClick={()=>{handleCall('/settings/navigation')}}>
                 <h1 className=''>Navigation </h1>
                 <p>Set up logo, primary and secqurity and secoundry meanus</p>
             </div>
